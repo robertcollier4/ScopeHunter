@@ -1,0 +1,64 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "ScopeHunter\n\n\nSyntax Scope Viewer in Sublime Text.\n\n\n\n\nScopeHunter\n\n\nThis is a simple plugin get the scope under the cursor(s) in Sublime Text.  This is useful for plugin development.\n\n\nDark theme with simple output:\n\n\n\n\nLight theme with advanced output:\n\n\n\n\nFeatures\n\n\nAll features are configurable via the settings file\n\n\n\n\nOptionally show output in tooltip (stylesheets are configurable)\n\n\nOptionally auto choose dark or light tooltip theme depending on your color scheme.\n\n\nOptionally dump output to auto-popup panel and/or console\n\n\nOptionally dump scope to status bar (no multi-select support).\n\n\nMulti-select support for all output except status bar.\n\n\nOptionally log scope extent in line/char format and/or point format.\n\n\nOptionally copy scope(s) to clipboard\n\n\nOptionally highlight and/or log scope extent.\n\n\nOptionally log color scheme colors and selectors.\n\n\nOptionally log location of Scheme file and Syntax.\n\n\nSupports \nSubNotify\n messages.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#scopehunter", 
+            "text": "Syntax Scope Viewer in Sublime Text.", 
+            "title": "ScopeHunter"
+        }, 
+        {
+            "location": "/#scopehunter_1", 
+            "text": "This is a simple plugin get the scope under the cursor(s) in Sublime Text.  This is useful for plugin development.  Dark theme with simple output:   Light theme with advanced output:", 
+            "title": "ScopeHunter"
+        }, 
+        {
+            "location": "/#features", 
+            "text": "All features are configurable via the settings file   Optionally show output in tooltip (stylesheets are configurable)  Optionally auto choose dark or light tooltip theme depending on your color scheme.  Optionally dump output to auto-popup panel and/or console  Optionally dump scope to status bar (no multi-select support).  Multi-select support for all output except status bar.  Optionally log scope extent in line/char format and/or point format.  Optionally copy scope(s) to clipboard  Optionally highlight and/or log scope extent.  Optionally log color scheme colors and selectors.  Optionally log location of Scheme file and Syntax.  Supports  SubNotify  messages.", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/usage/", 
+            "text": "User Guide\n\n\nConfiguration and usage of ScopeHunter.\n\n\n\n\nCommand Usage\n\n\nAll commands are accessible via the command palette.\n\n\nScope Hunter: Show Scope Under Cursor\n\n\nShow scope under cursor or cursors (depending whether multi-select is enabled)\n\n\nScope Hunter: Toggle Instant Scoper\n\n\nToggle scoping under cursor constantly.\n\n\nScope Hunter: User Settings\n\n\nIn order to change the standard settings of Scope Hunter, please go to \nPreferences -\n Package Settings -\n Scope Hunter\n and click on \nSettings - User\n.  Repeat that for \nSettings - Default\n, copy all the settings from the default file that you wish to change to the user settings file.", 
+            "title": "User Guide"
+        }, 
+        {
+            "location": "/usage/#user-guide", 
+            "text": "Configuration and usage of ScopeHunter.", 
+            "title": "User Guide"
+        }, 
+        {
+            "location": "/usage/#command-usage", 
+            "text": "All commands are accessible via the command palette.", 
+            "title": "Command Usage"
+        }, 
+        {
+            "location": "/usage/#scope-hunter-show-scope-under-cursor", 
+            "text": "Show scope under cursor or cursors (depending whether multi-select is enabled)", 
+            "title": "Scope Hunter: Show Scope Under Cursor"
+        }, 
+        {
+            "location": "/usage/#scope-hunter-toggle-instant-scoper", 
+            "text": "Toggle scoping under cursor constantly.", 
+            "title": "Scope Hunter: Toggle Instant Scoper"
+        }, 
+        {
+            "location": "/usage/#scope-hunter-user-settings", 
+            "text": "In order to change the standard settings of Scope Hunter, please go to  Preferences -  Package Settings -  Scope Hunter  and click on  Settings - User .  Repeat that for  Settings - Default , copy all the settings from the default file that you wish to change to the user settings file.", 
+            "title": "Scope Hunter: User Settings"
+        }, 
+        {
+            "location": "/license/", 
+            "text": "License\n\n\n\n\nScope Hunter is released under the MIT license.\n\n\nCopyright \n 2012 - 2015 Isaac Muse \n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \nSoftware\n), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\n\nTHE SOFTWARE IS PROVIDED \nAS IS\n, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.", 
+            "title": "License"
+        }, 
+        {
+            "location": "/license/#license", 
+            "text": "Scope Hunter is released under the MIT license.  Copyright   2012 - 2015 Isaac Muse   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the  Software ), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED  AS IS , WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.", 
+            "title": "License"
+        }
+    ]
+}
