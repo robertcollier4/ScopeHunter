@@ -70,6 +70,9 @@
                         <li class="toctree-l3"><a href="#scope-hunter-user-settings">Scope Hunter: User Settings</a></li>
                         
                     
+                        <li class="toctree-l3"><a href="#customizing-tooltip-theme">Customizing Tooltip Theme</a></li>
+                        
+                    
                     </ul>
                 
             </li>
@@ -132,6 +135,20 @@
 <p>Toggle scoping under cursor constantly.</p>
 <h1 id="scope-hunter-user-settings"><a name="user-content-scope-hunter-user-settings" href="#scope-hunter-user-settings" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Hunter: User Settings</h1>
 <p>In order to change the standard settings of Scope Hunter, please go to <code>Preferences -&gt; Package Settings -&gt; Scope Hunter</code> and click on <code>Settings - User</code>.  Repeat that for <code>Settings - Default</code>, copy all the settings from the default file that you wish to change to the user settings file.</p>
+<h1 id="customizing-tooltip-theme"><a name="user-content-customizing-tooltip-theme" href="#customizing-tooltip-theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Customizing Tooltip Theme</h1>
+<p>On the latest ST3 branches, a new tooltip API is available.  ScopeHunter can take advantage of this feature and provide useful scope tooltips when invoked.  ScopeHunter comes with a theme that provides a light and dark variant that will be used depending on how light or dark you current color scheme is.</p>
+<p>You can create your own if desired and use it instead of the default.  The theme folder must include a <code>light.tt_theme</code> file and a <code>dark.tt_theme</code> file.  The <code>tt_theme</code> files are a JSON files with a slightly modified syntax allowing JavaScript style comments.  <code>tt_theme</code> files point to needed theme assets and set certain variables that are not defined in CSS files.  All assets should be contained within the tt_theme folder and paths in the <code>tt_theme</code> files are relative to the <code>tt_theme</code> file itself.  Do not use windows style backslashes <code>\</code>.</p>
+<p>Example tt_theme structure:</p>
+<div class="codehilite"><pre>tt_theme/
+    dark.tt_theme
+    light.tt_theme
+    css/
+        dark.css
+        light.css
+</pre></div>
+
+
+<p>Please use the default <code>tt_theme</code> as an example and template for creating your own.  In the default <code>tt_theme</code> you should be able to see all the settings that can be set, and all the CSS classes that can be targeted.</p>
               
             </div>
           </div>
@@ -183,7 +200,7 @@
 
 <!--
 MkDocs version      : 0.13.0.dev
-Docs Build Date UTC : 2015-04-29 00:40:28.962858
+Docs Build Date UTC : 2015-05-08 02:04:28.152334
 -->
 </body>
 </html>
