@@ -65,28 +65,11 @@
             
                 <li class="toctree-l3"><a href="#user-guide">User Guide</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#command-usage">Command Usage</a></li>
+                    <li><a class="toctree-l4" href="#command-usage">Command Usage</a></li>
                 
-                    <li><a class="toctree-l4" href="#scope-hunter-show-scope-under-cursor">Scope Hunter: Show Scope Under Cursor</a></li>
+                    <li><a class="toctree-l4" href="#scope-hunter-user-settings">Scope Hunter: User Settings</a></li>
                 
-                    <li><a class="toctree-l4" href="#scope-hunter-toggle-instant-scoper">Scope Hunter: Toggle Instant Scoper</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#scope-hunter-user-settings">Scope Hunter: User Settings</a></li>
-                
-                    <li><a class="toctree-l4" href="#view-options">View options</a></li>
-                
-                    <li><a class="toctree-l4" href="#scope-info">Scope Info</a></li>
-                
-                    <li><a class="toctree-l4" href="#scope-highlighting">Scope Highlighting</a></li>
-                
-                    <li><a class="toctree-l4" href="#miscellaneous-options">Miscellaneous Options</a></li>
-                
-                    <li><a class="toctree-l4" href="#tooltip-theme">Tooltip Theme</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#customizing-tooltip-theme">Customizing Tooltip Theme</a></li>
+                    <li><a class="toctree-l4" href="#customizing-tooltip-theme">Customizing Tooltip Theme</a></li>
                 
             
             </ul>
@@ -96,7 +79,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../contributing/">Contributing & Support</a>
+        <a class="" href="../contributing/">Contributing &amp; Support</a>
         
     </li>
 <li>
@@ -147,15 +130,15 @@
                 <h1 class="doctitle" id="user-guide"><a name="user-content-user-guide" href="#user-guide" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>User Guide</h1>
 <p>Configuration and usage of ScopeHunter.</p>
 <hr />
-<h1 id="command-usage"><a name="user-content-command-usage" href="#command-usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Command Usage</h1>
+<h2 id="command-usage"><a name="user-content-command-usage" href="#command-usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Command Usage</h2>
 <p>All commands are accessible via the command palette.</p>
-<h2 id="scope-hunter-show-scope-under-cursor"><a name="user-content-scope-hunter-show-scope-under-cursor" href="#scope-hunter-show-scope-under-cursor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Hunter: Show Scope Under Cursor</h2>
+<h3 id="scope-hunter-show-scope-under-cursor"><a name="user-content-scope-hunter-show-scope-under-cursor" href="#scope-hunter-show-scope-under-cursor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Hunter: Show Scope Under Cursor</h3>
 <p>Show scope under cursor or cursors (depending whether multi-select is enabled)</p>
-<h2 id="scope-hunter-toggle-instant-scoper"><a name="user-content-scope-hunter-toggle-instant-scoper" href="#scope-hunter-toggle-instant-scoper" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Hunter: Toggle Instant Scoper</h2>
+<h3 id="scope-hunter-toggle-instant-scoper"><a name="user-content-scope-hunter-toggle-instant-scoper" href="#scope-hunter-toggle-instant-scoper" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Hunter: Toggle Instant Scoper</h3>
 <p>Toggle scoping under cursor constantly.</p>
-<h1 id="scope-hunter-user-settings"><a name="user-content-scope-hunter-user-settings" href="#scope-hunter-user-settings" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Hunter: User Settings</h1>
+<h2 id="scope-hunter-user-settings"><a name="user-content-scope-hunter-user-settings" href="#scope-hunter-user-settings" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Hunter: User Settings</h2>
 <p>In order to change the standard settings of Scope Hunter, please go to <code>Preferences -&gt; Package Settings -&gt; Scope Hunter</code> and click on <code>Settings - User</code>.  Repeat that for <code>Settings - Default</code>, copy all the settings from the default file that you wish to change to the user settings file.</p>
-<h2 id="view-options"><a name="user-content-view-options" href="#view-options" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>View options</h2>
+<h3 id="view-options"><a name="user-content-view-options" href="#view-options" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>View options</h3>
 <p>ScopeHunter on ST3, by default, uses the output panel to communicate the scope.  But if you prefer a more subtle or flashier way of displaying the scope, ScopeHunter can be configured to do so.</p>
 <div class="codehilite"><pre>    <span class="c1">///////////////////////////</span>
     <span class="c1">// View Options</span>
@@ -175,15 +158,15 @@
 </pre></div>
 
 
-<h3 id="show_popup"><a name="user-content-show_popup" href="#show_popup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>show_popup</h3>
+<h4 id="show_popup"><a name="user-content-show_popup" href="#show_popup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>show_popup</h4>
 <p>This uses the new ST3 tooltip API to display as is my personal favorite.  It shows a styled tooltip with all the information about the scope of the current cursor(s).  You get previews of the colors, and you can click links to copy the info to the clipboard.</p>
-<h3 id="show_statusbar"><a name="user-content-show_statusbar" href="#show_statusbar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>show_statusbar</h3>
+<h4 id="show_statusbar"><a name="user-content-show_statusbar" href="#show_statusbar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>show_statusbar</h4>
 <p>This shows just the scope in the status bar.  Simple and subtle.</p>
-<h3 id="show_panel"><a name="user-content-show_panel" href="#show_panel" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>show_panel</h3>
+<h4 id="show_panel"><a name="user-content-show_panel" href="#show_panel" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>show_panel</h4>
 <p>This shows the scope and related info in an output panel.  This allows a user to directly copy and paste the info from the panel.</p>
-<h3 id="console_log"><a name="user-content-console_log" href="#console_log" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>console_log</h3>
+<h4 id="console_log"><a name="user-content-console_log" href="#console_log" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>console_log</h4>
 <p>This is useful if you are doing something like <code>show_statusbar</code>.  You can keep the output subtle, but you can open the console and get more in depth info that you can copy and paste.</p>
-<h2 id="scope-info"><a name="user-content-scope-info" href="#scope-info" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Info</h2>
+<h3 id="scope-info"><a name="user-content-scope-info" href="#scope-info" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Info</h3>
 <p>For modes like <code>show_panel</code>, <code>console_log</code>, and <code>show_popup</code> you can control the info displayed.  You can keep it just to the scope, or you can extend it show other useful info.</p>
 <div class="codehilite"><pre>    <span class="c1">///////////////////////////</span>
     <span class="c1">// Additional Scope Info</span>
@@ -216,21 +199,21 @@
 </pre></div>
 
 
-<h3 id="extent_points"><a name="user-content-extent_points" href="#extent_points" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>extent_points</h3>
+<h4 id="extent_points"><a name="user-content-extent_points" href="#extent_points" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>extent_points</h4>
 <p>Show the extent of the scope as view points.</p>
-<h3 id="extent_line_char"><a name="user-content-extent_line_char" href="#extent_line_char" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>extent_line_char</h3>
+<h4 id="extent_line_char"><a name="user-content-extent_line_char" href="#extent_line_char" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>extent_line_char</h4>
 <p>Show the extent of the scope as line/char or row/col format.</p>
-<h3 id="highlight_extent"><a name="user-content-highlight_extent" href="#highlight_extent" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>highlight_extent</h3>
+<h4 id="highlight_extent"><a name="user-content-highlight_extent" href="#highlight_extent" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>highlight_extent</h4>
 <p>Highlight the scope extent.</p>
-<h3 id="styling"><a name="user-content-styling" href="#styling" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>styling</h3>
+<h4 id="styling"><a name="user-content-styling" href="#styling" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>styling</h4>
 <p>Show not only the color value of the scope and text styling.</p>
-<h3 id="show_simulated_alpha_colors"><a name="user-content-show_simulated_alpha_colors" href="#show_simulated_alpha_colors" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>show_simulated_alpha_colors</h3>
+<h4 id="show_simulated_alpha_colors"><a name="user-content-show_simulated_alpha_colors" href="#show_simulated_alpha_colors" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>show_simulated_alpha_colors</h4>
 <p>When showing color values, ScopeHunter can show the perceived color value of transparent colors (or mix the transparent foreground with the background giving the color value you are actually seeing).</p>
-<h3 id="selectors"><a name="user-content-selectors" href="#selectors" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>selectors</h3>
+<h4 id="selectors"><a name="user-content-selectors" href="#selectors" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>selectors</h4>
 <p>Show the color scheme selectors that are responsible for applying the visible color and styles.</p>
-<h3 id="file_paths"><a name="user-content-file_paths" href="#file_paths" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>file_paths</h3>
+<h4 id="file_paths"><a name="user-content-file_paths" href="#file_paths" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>file_paths</h4>
 <p>Show the file paths of the color scheme and language file that are responsible for giving the styled appearance of your view.  In the tooltip, you can click these links and open the responsible file directly in Sublime Text.</p>
-<h2 id="scope-highlighting"><a name="user-content-scope-highlighting" href="#scope-highlighting" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Highlighting</h2>
+<h3 id="scope-highlighting"><a name="user-content-scope-highlighting" href="#scope-highlighting" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Scope Highlighting</h3>
 <p>When <code>highlight_extent</code> is enabled, this controls the visual style of the highlights.  Due to the way the Sublime Text API for highlighting regions works, colors must be described as scope names from your color scheme file.  Just define the scope to use and the supported style as shown below.</p>
 <div class="codehilite"><pre>    <span class="c1">///////////////////////////</span>
     <span class="c1">// Highlight Configuration</span>
@@ -244,7 +227,7 @@
 </pre></div>
 
 
-<h2 id="miscellaneous-options"><a name="user-content-miscellaneous-options" href="#miscellaneous-options" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Miscellaneous Options</h2>
+<h3 id="miscellaneous-options"><a name="user-content-miscellaneous-options" href="#miscellaneous-options" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Miscellaneous Options</h3>
 <p>Lastly there are a couple of other options:</p>
 <div class="codehilite"><pre>    <span class="c1">///////////////////////////</span>
     <span class="c1">// Additional Options</span>
@@ -264,15 +247,15 @@
 </pre></div>
 
 
-<h3 id="clipboard"><a name="user-content-clipboard" href="#clipboard" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>clipboard</h3>
+<h4 id="clipboard"><a name="user-content-clipboard" href="#clipboard" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>clipboard</h4>
 <p>Auto-copies just the scope to the clipboard.</p>
-<h3 id="multiselect"><a name="user-content-multiselect" href="#multiselect" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>multiselect</h3>
+<h4 id="multiselect"><a name="user-content-multiselect" href="#multiselect" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>multiselect</h4>
 <p>Allow displaying the scope info for multiple cursor selections (does not work for <code>show_statusbar</code> as space is limited).</p>
-<h3 id="highlgiht_max_size"><a name="user-content-highlgiht_max_size" href="#highlgiht_max_size" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>highlgiht_max_size</h3>
+<h4 id="highlgiht_max_size"><a name="user-content-highlgiht_max_size" href="#highlgiht_max_size" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>highlgiht_max_size</h4>
 <p>For performance, ScopeHunter is limited to highlight regions less that a given size.  If a region is bigger than the defined limit, it will not be highlighted.  You can control that limit here.</p>
-<h3 id="use_sub_notify"><a name="user-content-use_sub_notify" href="#use_sub_notify" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>use_sub_notify</h3>
+<h4 id="use_sub_notify"><a name="user-content-use_sub_notify" href="#use_sub_notify" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>use_sub_notify</h4>
 <p>If you have the <a href="#https://github.com/facelessuser/SubNotify">SubNotify</a> installed, this will enable or disable messages through it.</p>
-<h2 id="tooltip-theme"><a name="user-content-tooltip-theme" href="#tooltip-theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tooltip Theme</h2>
+<h3 id="tooltip-theme"><a name="user-content-tooltip-theme" href="#tooltip-theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tooltip Theme</h3>
 <p>You can choose a different theme style if you desire.  See <a href="#customizing-tootip-theme">customizing tooltip theme</a> for more info on creating your own theme.</p>
 <div class="codehilite"><pre>    <span class="c1">///////////////////////////</span>
     <span class="c1">// Tooltip Configurations</span>
@@ -283,9 +266,9 @@
 </pre></div>
 
 
-<h3 id="tooltip_theme"><a name="user-content-tooltip_theme" href="#tooltip_theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>tooltip_theme</h3>
+<h4 id="tooltip_theme"><a name="user-content-tooltip_theme" href="#tooltip_theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>tooltip_theme</h4>
 <p>Simply provide the path to the theme relative from the Sublime <code>Packages</code> folder.</p>
-<h1 id="customizing-tooltip-theme"><a name="user-content-customizing-tooltip-theme" href="#customizing-tooltip-theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Customizing Tooltip Theme</h1>
+<h2 id="customizing-tooltip-theme"><a name="user-content-customizing-tooltip-theme" href="#customizing-tooltip-theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Customizing Tooltip Theme</h2>
 <p>On the latest ST3 branches, a new tooltip API is available.  ScopeHunter can take advantage of this feature and provide useful scope tooltips when invoked.  ScopeHunter comes with a theme that provides a light and dark variant that will be used depending on how light or dark you current color scheme is.</p>
 <p>You can create your own if desired and use it instead of the default.  The theme folder must include a <code>light.tt_theme</code> file and a <code>dark.tt_theme</code> file.  The <code>tt_theme</code> files are a JSON files with a slightly modified syntax allowing JavaScript style comments.  <code>tt_theme</code> files point to needed theme assets and set certain variables that are not defined in CSS files.  All assets should be contained within the tt_theme folder and paths in the <code>tt_theme</code> files are relative to the <code>tt_theme</code> file itself.  Do not use windows style backslashes <code>\</code>.</p>
 <p>Example tt_theme structure:</p>
@@ -306,7 +289,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../contributing/" class="btn btn-neutral float-right" title="Contributing & Support"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../contributing/" class="btn btn-neutral float-right" title="Contributing &amp; Support"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
