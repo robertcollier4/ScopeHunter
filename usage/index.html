@@ -69,8 +69,6 @@
                 
                     <li><a class="toctree-l4" href="#scope-hunter-user-settings">Scope Hunter: User Settings</a></li>
                 
-                    <li><a class="toctree-l4" href="#customizing-tooltip-theme">Customizing Tooltip Theme</a></li>
-                
             
             </ul>
         
@@ -255,33 +253,6 @@
 <p>For performance, ScopeHunter is limited to highlight regions less that a given size.  If a region is bigger than the defined limit, it will not be highlighted.  You can control that limit here.</p>
 <h4 id="use_sub_notify"><a name="user-content-use_sub_notify" href="#use_sub_notify" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>use_sub_notify</h4>
 <p>If you have the <a href="#https://github.com/facelessuser/SubNotify">SubNotify</a> installed, this will enable or disable messages through it.</p>
-<h3 id="tooltip-theme"><a name="user-content-tooltip-theme" href="#tooltip-theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tooltip Theme</h3>
-<p>You can choose a different theme style if you desire.  See <a href="#customizing-tootip-theme">Customizing Tooltip Theme</a> for more info on creating your own theme.</p>
-<div class="codehilite"><pre>    <span class="c1">///////////////////////////</span>
-    <span class="c1">// Tooltip Configurations</span>
-    <span class="c1">///////////////////////////</span>
-
-    <span class="c1">// Override theme.  Use forward slashes.</span>
-    <span class="s2">&quot;tooltip_theme&quot;</span><span class="o">:</span> <span class="s2">&quot;ScopeHunter/tt_theme&quot;</span><span class="p">,</span>
-</pre></div>
-
-
-<h4 id="tooltip_theme"><a name="user-content-tooltip_theme" href="#tooltip_theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>tooltip_theme</h4>
-<p>Simply provide the path to the theme relative from the Sublime <code>Packages</code> folder.</p>
-<h2 id="customizing-tooltip-theme"><a name="user-content-customizing-tooltip-theme" href="#customizing-tooltip-theme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Customizing Tooltip Theme</h2>
-<p>On the latest ST3 branches, a new tooltip API is available.  ScopeHunter can take advantage of this feature and provide useful scope tooltips when invoked.  ScopeHunter comes with a theme that provides a light and dark variant that will be used depending on how light or dark you current color scheme is.</p>
-<p>You can create your own if desired and use it instead of the default.  The theme folder must include a <code>light.tt_theme</code> file and a <code>dark.tt_theme</code> file.  The <code>tt_theme</code> files are JSON files with a slightly modified syntax allowing JavaScript style comments; just like what is used in Sublime Text.  <code>tt_theme</code> files point to needed theme assets and set certain variables that are not defined in CSS files.  All assets should be contained within the tt_theme folder and paths in the <code>tt_theme</code> files are relative to the <code>tt_theme</code> file itself.  Do not use windows style backslashes <code>\</code>.</p>
-<p>Example tt_theme structure:</p>
-<div class="codehilite"><pre>tt_theme/
-    dark.tt_theme
-    light.tt_theme
-    css/
-        dark.css
-        light.css
-</pre></div>
-
-
-<p>Please use the default <code>tt_theme</code> as an example and template for creating your own.  In the default <code>tt_theme</code> you should be able to see all the settings that can be set, and all the CSS classes that can be targeted.</p>
               
             </div>
           </div>
