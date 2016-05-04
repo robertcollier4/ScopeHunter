@@ -28,7 +28,6 @@ ADD_CSS = '''
 '''
 
 # Scope Toolip Markdown
-SCOPE_HEADER = '## Scope\n'
 SCOPES = '''
 %s
 [(copy)](copy-scope:%d){: .scope-hunter .small}
@@ -103,30 +102,6 @@ COPY_ALL = '''
 
 [(copy all)](copy-all){: .scope-hunter .small}
 '''
-
-# Text Entry
-ENTRY = "%-30s %s"
-SCOPE_KEY = "Scope"
-PTS_KEY = "Scope Extents (Pts)"
-PTS_VALUE = "(%d, %d)"
-CHAR_LINE_KEY = "Scope Extents (Line/Char)"
-CHAR_LINE_VALUE = "(line: %d char: %d, line: %d char: %d)"
-FG_KEY = "Fg"
-FG_SIM_KEY = "Fg (Simulated Alpha)"
-BG_KEY = "Bg"
-BG_SIM_KEY = "Bg (Simulated Alpha)"
-STYLE_KEY = "Style"
-FG_NAME_KEY = "Fg Name"
-FG_SCOPE_KEY = "Fg Scope"
-BG_NAME_KEY = "Bg Name"
-BG_SCOPE_KEY = "Bg Scope"
-BOLD_NAME_KEY = "Bold Name"
-BOLD_SCOPE_KEY = "Bold Scope"
-ITALIC_NAME_KEY = "Italic Name"
-ITALIC_SCOPE_KEY = "Italic Scope"
-SCHEME_KEY = "Scheme File"
-SYNTAX_KEY = "Syntax File"
-
 
 def log(msg):
     """Logging."""
@@ -260,11 +235,9 @@ class GetSelectionScope(object):
 
         if self.points_info or self.rowcol_info:
             if self.points_info:
-                self.scope_bfr.append(ENTRY % (PTS_KEY + ':', PTS_VALUE % (pts.begin(), pts.end())))
+                self.scope_bfr.append('Scope Extents (Pts): (' + pts.begin() + ', ' + pts.end() + ')')
             if self.rowcol_info:
-                self.scope_bfr.append(
-                    ENTRY % (CHAR_LINE_KEY + ':', CHAR_LINE_VALUE % (row1 + 1, col1 + 1, row2 + 1, col2 + 1))
-                )
+                self.scope_bfr.append('Scope Extents (Line/Char) : (line:' + row1+1 + ' char:' + col1+1 + ', line:' + row2+1 + ' char:' + col2+1)
 
             if self.show_popup:
                 self.scope_bfr_tool.append(SCOPE_EXTENT_HEADER)
@@ -286,11 +259,10 @@ class GetSelectionScope(object):
             self.status = scope
             self.first = False
 
-        # self.scope_bfr.append(ENTRY % (SCOPE_KEY + ':', self.view.scope_name(pt).strip().replace(" ", spacing)))
         self.scope_bfr.append(self.view.scope_name(pt))
 
         if self.show_popup:
-            self.scope_bfr_tool.append(SCOPE_HEADER)
+            self.scope_bfr_tool.append('## Scope\n')
             self.scope_bfr_tool.append(SCOPES % (self.view.scope_name(pt).strip(), self.next_index()))
 
         return scope
@@ -298,15 +270,15 @@ class GetSelectionScope(object):
     def get_appearance(self, color, color_sim, bgcolor, bgcolor_sim, style):
         """Get colors of foreground, background, and simulated transparency colors."""
 
-        self.scope_bfr.append(ENTRY % (FG_KEY + ":", color))
+        self.scope_bfr.append('Fg: ' + color)
         if self.show_simulated and len(color) == 9 and not color.lower().endswith('ff'):
-            self.scope_bfr.append(ENTRY % (FG_SIM_KEY + ":", color_sim))
+            self.scope_bfr.append('Fg (Simulated Alpha): ' + color_sim)
 
-        self.scope_bfr.append(ENTRY % (BG_KEY + ":", bgcolor))
+        self.scope_bfr.append('Bg: ' + bgcolor)
         if self.show_simulated and len(bgcolor) == 9 and not bgcolor.lower().endswith('ff'):
-            self.scope_bfr.append(ENTRY % (BG_SIM_KEY + ":", bgcolor_sim))
+            self.scope_bfr.append('Bg (Simulated Alpha): ' + bgcolor_sim)
 
-        self.scope_bfr.append(ENTRY % (STYLE_KEY + ":", style))
+        self.scope_bfr.append('Style: ' + style)
 
         if self.show_popup:
             self.scope_bfr_tool.append(APPEARANCE_HEADER)
@@ -336,8 +308,8 @@ class GetSelectionScope(object):
 
         self.scheme_file = scheme_matcher.color_scheme.replace('\\', '/')
         self.syntax_file = self.view.settings().get('syntax')
-        self.scope_bfr.append(ENTRY % (SCHEME_KEY + ":", self.scheme_file))
-        self.scope_bfr.append(ENTRY % (SYNTAX_KEY + ":", self.syntax_file))
+        self.scope_bfr.append('Scheme File: ' + self.scheme_file)
+        self.scope_bfr.append('Syntax File: ' + self.syntax_file)
 
         if self.show_popup:
             self.scope_bfr_tool.append(FILE_HEADER)
@@ -347,17 +319,17 @@ class GetSelectionScope(object):
     def get_selectors(self, color_selector, bg_selector, style_selectors):
         """Get the selectors used to determine color and/or style."""
 
-        self.scope_bfr.append(ENTRY % (FG_NAME_KEY + ":", color_selector.name))
-        self.scope_bfr.append(ENTRY % (FG_SCOPE_KEY + ":", color_selector.scope))
-        self.scope_bfr.append(ENTRY % (BG_NAME_KEY + ":", bg_selector.name))
-        self.scope_bfr.append(ENTRY % (BG_SCOPE_KEY + ":", bg_selector.scope))
+        self.scope_bfr.append('Fg Name: ' + color_selector.name)
+        self.scope_bfr.append('Fg Scope: ' + color_selector.scope)
+        self.scope_bfr.append('Bg Name: ' + bg_selector.name)
+        self.scope_bfr.append('Bg Scope: ' + bg_selector.scope)
         if style_selectors["bold"].name != "" or style_selectors["bold"].scope != "":
-            self.scope_bfr.append(ENTRY % (BOLD_NAME_KEY + ":", style_selectors["bold"].name))
-            self.scope_bfr.append(ENTRY % (BOLD_SCOPE_KEY + ":", style_selectors["bold"].scope))
+            self.scope_bfr.append('Bold Name: ' + style_selectors["bold"].name)
+            self.scope_bfr.append('Bold Scope: ' + style_selectors["bold"].scope)
 
         if style_selectors["italic"].name != "" or style_selectors["italic"].scope != "":
-            self.scope_bfr.append(ENTRY % (ITALIC_NAME_KEY + ":", style_selectors["italic"].name))
-            self.scope_bfr.append(ENTRY % (ITALIC_SCOPE_KEY + ":", style_selectors["italic"].scope))
+            self.scope_bfr.append('Italic Name: ' + style_selectors["italic"].name)
+            self.scope_bfr.append('Italic Scope: ' + style_selectors["italic"].scope)
 
         if self.show_popup:
             self.scope_bfr_tool.append(SELECTOR_HEADER)
@@ -426,39 +398,39 @@ class GetSelectionScope(object):
                 lambda x: x.replace('\n' + ' ' * 31, ' ')
             )
         elif key == 'copy-points':
-            copy_data(self.scope_bfr, PTS_KEY, index)
+            copy_data(self.scope_bfr, 'Scope Extents (Pts)', index)
         elif key == 'copy-line-char':
-            copy_data(self.scope_bfr, CHAR_LINE_KEY, index)
+            copy_data(self.scope_bfr, 'Scope Extents (Line/Char)', index)
         elif key == 'copy-fg':
-            copy_data(self.scope_bfr, FG_KEY, index)
+            copy_data(self.scope_bfr, 'Fg', index)
         elif key == 'copy-fg-sim':
-            copy_data(self.scope_bfr, FG_SIM_KEY, index)
+            copy_data(self.scope_bfr, 'Fg (Simulated Alpha)', index)
         elif key == 'copy-bg':
-            copy_data(self.scope_bfr, BG_KEY, index)
+            copy_data(self.scope_bfr, 'Bg', index)
         elif key == 'copy-bg-sim':
-            copy_data(self.scope_bfr, BG_SIM_KEY, index)
+            copy_data(self.scope_bfr, 'Bg (Simulated Alpha)', index)
         elif key == 'copy-style':
-            copy_data(self.scope_bfr, STYLE_KEY, index)
+            copy_data(self.scope_bfr, 'Style', index)
         elif key == 'copy-fg-sel-name':
-            copy_data(self.scope_bfr, FG_NAME_KEY, index)
+            copy_data(self.scope_bfr, 'Fg Name', index)
         elif key == 'copy-fg-sel-scope':
-            copy_data(self.scope_bfr, FG_SCOPE_KEY, index)
+            copy_data(self.scope_bfr, 'Fg Scope', index)
         elif key == 'copy-bg-sel-name':
-            copy_data(self.scope_bfr, BG_NAME_KEY, index)
+            copy_data(self.scope_bfr, 'Bg Name', index)
         elif key == 'copy-bg-sel-scope':
-            copy_data(self.scope_bfr, BG_SCOPE_KEY, index)
+            copy_data(self.scope_bfr, 'Bg Scope', index)
         elif key == 'copy-bold-sel-name':
-            copy_data(self.scope_bfr, BOLD_NAME_KEY, index)
+            copy_data(self.scope_bfr, 'Bold Name', index)
         elif key == 'copy-bold-sel-scope':
-            copy_data(self.scope_bfr, BOLD_SCOPE_KEY, index)
+            copy_data(self.scope_bfr, 'Bold Scope', index)
         elif key == 'copy-italic-sel-name':
-            copy_data(self.scope_bfr, ITALIC_NAME_KEY, index)
+            copy_data(self.scope_bfr, 'Italic Name', index)
         elif key == 'copy-italic-sel-scope':
-            copy_data(self.scope_bfr, ITALIC_SCOPE_KEY, index)
+            copy_data(self.scope_bfr, 'Italic Scope', index)
         elif key == 'copy-scheme':
-            copy_data(self.scope_bfr, SCHEME_KEY, index)
+            copy_data(self.scope_bfr, 'Scheme File', index)
         elif key == 'copy-syntax':
-            copy_data(self.scope_bfr, SYNTAX_KEY, index)
+            copy_data(self.scope_bfr, 'Syntax File', index)
         elif key == 'scheme' and self.scheme_file is not None:
             window = self.view.window()
             window.run_command(
