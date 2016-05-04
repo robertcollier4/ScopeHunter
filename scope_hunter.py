@@ -286,7 +286,8 @@ class GetSelectionScope(object):
             self.status = scope
             self.first = False
 
-        self.scope_bfr.append(ENTRY % (SCOPE_KEY + ':', self.view.scope_name(pt).strip().replace(" ", spacing)))
+        # self.scope_bfr.append(ENTRY % (SCOPE_KEY + ':', self.view.scope_name(pt).strip().replace(" ", spacing)))
+        self.scope_bfr.append(self.view.scope_name(pt))
 
         if self.show_popup:
             self.scope_bfr_tool.append(SCOPE_HEADER)
@@ -406,9 +407,7 @@ class GetSelectionScope(object):
         if self.file_path_info and scheme_matcher:
             self.get_scheme_syntax()
 
-        # Divider
         self.next_index()
-        self.scope_bfr.append("------")
 
     def on_navigate(self, href):
         """Exceute link callback."""
